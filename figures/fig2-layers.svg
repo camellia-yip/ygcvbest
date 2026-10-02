@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',sans-serif">
+  <defs>
+    <marker id="up" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b5aa8"/></marker>
+  </defs>
+  <rect width="1000" height="450" rx="14" fill="#fbfaf7"/>
+  <text x="40" y="44" font-size="20" font-weight="700" fill="#1d2430">我的三个假设，其实都挤在同一层</text>
+
+  <!-- bands -->
+  <rect x="40" y="70" width="620" height="95" rx="10" fill="#fff" stroke="#d9dce1"/>
+  <text x="58" y="96" font-size="14" font-weight="700" fill="#4a5260">认知与逻辑层</text>
+  <rect x="40" y="178" width="620" height="95" rx="10" fill="#fff" stroke="#d9dce1"/>
+  <text x="58" y="204" font-size="14" font-weight="700" fill="#4a5260">决策与规划层</text>
+  <rect x="40" y="286" width="620" height="115" rx="10" fill="#eef6f1" stroke="#2f7d4f" stroke-width="1.6"/>
+  <text x="58" y="312" font-size="14" font-weight="700" fill="#2f7d4f">感知与表征层 ← 三个假设全部落在这里</text>
+
+  <!-- uncovered chips -->
+  <g font-size="13" fill="#7a828e" text-anchor="middle">
+    <rect x="70" y="112" width="170" height="36" rx="8" fill="none" stroke="#b9bec6" stroke-dasharray="5 4"/><text x="155" y="135">推理 → 动作 接地</text>
+    <rect x="260" y="112" width="170" height="36" rx="8" fill="none" stroke="#b9bec6" stroke-dasharray="5 4"/><text x="345" y="135">多规则冲突裁决</text>
+    <rect x="70" y="220" width="170" height="36" rx="8" fill="none" stroke="#b9bec6" stroke-dasharray="5 4"/><text x="155" y="243">训练目标 / 代价</text>
+    <rect x="260" y="220" width="170" height="36" rx="8" fill="none" stroke="#b9bec6" stroke-dasharray="5 4"/><text x="345" y="243">闭环误差复合</text>
+    <rect x="450" y="220" width="170" height="36" rx="8" fill="none" stroke="#b9bec6" stroke-dasharray="5 4"/><text x="535" y="243">时序 / 延迟</text>
+  </g>
+  <text x="640" y="140" font-size="12" fill="#7a828e" text-anchor="end">虚线 = 三个假设都没覆盖</text>
+
+  <!-- my hypotheses -->
+  <g font-size="14" text-anchor="middle">
+    <rect x="70" y="330" width="170" height="52" rx="10" fill="#2f7d4f"/>
+    <text x="155" y="352" fill="#fff" font-weight="700">A1 物理</text><text x="155" y="372" fill="#d7efe0" font-size="12">动力学表征</text>
+    <rect x="260" y="330" width="170" height="52" rx="10" fill="#2f7d4f"/>
+    <text x="345" y="352" fill="#fff" font-weight="700">A2 交互</text><text x="345" y="372" fill="#d7efe0" font-size="12">他者行为表征</text>
+    <rect x="450" y="330" width="170" height="52" rx="10" fill="#2f7d4f"/>
+    <text x="535" y="352" fill="#fff" font-weight="700">A3 规则符号</text><text x="535" y="372" fill="#d7efe0" font-size="12">符号表征</text>
+  </g>
+
+  <!-- paradigm shift arrow -->
+  <line x1="740" y1="390" x2="740" y2="84" stroke="#2b5aa8" stroke-width="3" marker-end="url(#up)"/>
+  <g font-size="14">
+    <circle cx="740" cy="344" r="7" fill="#2b5aa8"/><text x="760" y="349" fill="#1d2430" font-weight="700">模块化</text>
+    <circle cx="740" cy="226" r="7" fill="#2b5aa8"/><text x="760" y="231" fill="#1d2430" font-weight="700">端到端 E2E</text>
+    <circle cx="740" cy="118" r="7" fill="#2b5aa8"/><text x="760" y="123" fill="#1d2430" font-weight="700">VLA</text>
+  </g>
+  <text x="760" y="365" font-size="12" fill="#4a5260">主导失败层在表征</text>
+  <text x="760" y="247" font-size="12" fill="#4a5260">主导失败层上移到决策</text>
+  <text x="760" y="139" font-size="12" fill="#4a5260">主导失败层上移到认知</text>
+  <text x="40" y="430" font-size="12" fill="#7a828e">分层框架来自一篇 2026 年安全综述（D 类证据，仅作组织框架）</text>
+</svg>

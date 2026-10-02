@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',sans-serif">
+  <defs>
+    <marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect width="1000" height="580" rx="14" fill="#fbfaf7"/>
+  <text x="30" y="42" font-size="20" font-weight="700" fill="#1d2430">闭环驾驶的流程：我最初画的 vs. 漏掉的盒子</text>
+  <g font-size="12" fill="#4a5260">
+    <rect x="610" y="56" width="26" height="14" rx="3" fill="#fff" stroke="#5b6472"/><text x="642" y="67">最初的设想</text>
+    <rect x="720" y="56" width="26" height="14" rx="3" fill="#fdecea" stroke="#c0392b" stroke-dasharray="4 3"/><text x="752" y="67">漏掉的</text>
+    <rect x="810" y="56" width="26" height="14" rx="3" fill="#eef3fb" stroke="#2b5aa8" stroke-dasharray="2 3"/><text x="842" y="67">还没想好</text>
+  </g>
+
+  <!-- inputs -->
+  <g font-size="13" text-anchor="middle" fill="#1d2430">
+    <rect x="30" y="92" width="130" height="44" rx="8" fill="#fff" stroke="#5b6472"/><text x="95" y="119">多摄像头</text>
+    <rect x="30" y="148" width="130" height="44" rx="8" fill="#fff" stroke="#5b6472"/><text x="95" y="175">自车速度</text>
+    <rect x="30" y="204" width="130" height="44" rx="8" fill="#fff" stroke="#5b6472"/><text x="95" y="231">历史轨迹</text>
+    <rect x="30" y="260" width="130" height="44" rx="8" fill="#eef3fb" stroke="#2b5aa8" stroke-dasharray="2 3"/><text x="95" y="287">目标 / 导航</text>
+  </g>
+  <!-- encoders -->
+  <g font-size="12" text-anchor="middle" fill="#4a5260">
+    <rect x="182" y="98" width="62" height="32" rx="6" fill="#fff" stroke="#5b6472"/><text x="213" y="119">Enc</text>
+    <rect x="182" y="154" width="62" height="32" rx="6" fill="#fff" stroke="#5b6472"/><text x="213" y="175">Enc</text>
+    <rect x="182" y="210" width="62" height="32" rx="6" fill="#fff" stroke="#5b6472"/><text x="213" y="231">Enc</text>
+    <rect x="182" y="266" width="62" height="32" rx="6" fill="#fff" stroke="#5b6472"/><text x="213" y="287">Enc</text>
+  </g>
+  <g stroke="#5b6472" stroke-width="1.5">
+    <line x1="160" y1="114" x2="180" y2="114"/><line x1="160" y1="170" x2="180" y2="170"/><line x1="160" y1="226" x2="180" y2="226"/><line x1="160" y1="282" x2="180" y2="282"/>
+    <line x1="244" y1="114" x2="268" y2="190" marker-end="url(#k)"/><line x1="244" y1="170" x2="268" y2="194" marker-end="url(#k)"/>
+    <line x1="244" y1="226" x2="268" y2="202" marker-end="url(#k)"/><line x1="244" y1="282" x2="268" y2="206" marker-end="url(#k)"/>
+  </g>
+  <!-- fusion -->
+  <rect x="270" y="130" width="120" height="136" rx="10" fill="#fff" stroke="#5b6472"/>
+  <text x="330" y="184" font-size="15" font-weight="700" fill="#1d2430" text-anchor="middle">融合</text>
+  <text x="330" y="206" font-size="13" fill="#4a5260" text-anchor="middle">→ 潜状态 zₜ</text>
+  <text x="330" y="238" font-size="11" fill="#c0392b" text-anchor="middle">⚠ 常被绕开</text>
+
+  <!-- candidates -->
+  <g font-size="13" text-anchor="middle" fill="#1d2430">
+    <rect x="420" y="104" width="90" height="40" rx="8" fill="#fff" stroke="#5b6472"/><text x="465" y="129">a₁</text>
+    <rect x="420" y="178" width="90" height="40" rx="8" fill="#fff" stroke="#5b6472"/><text x="465" y="203">a₂</text>
+    <rect x="420" y="252" width="90" height="40" rx="8" fill="#fff" stroke="#5b6472"/><text x="465" y="277">aₖ</text>
+  </g>
+  <text x="465" y="88" font-size="12" fill="#7a828e" text-anchor="middle">多个动作候选</text>
+  <g stroke="#5b6472" stroke-width="1.5">
+    <line x1="390" y1="198" x2="418" y2="124" marker-end="url(#k)"/><line x1="390" y1="198" x2="418" y2="198" marker-end="url(#k)"/><line x1="390" y1="198" x2="418" y2="272" marker-end="url(#k)"/>
+    <line x1="510" y1="124" x2="538" y2="124" marker-end="url(#k)"/><line x1="510" y1="198" x2="538" y2="198" marker-end="url(#k)"/><line x1="510" y1="272" x2="538" y2="272" marker-end="url(#k)"/>
+  </g>
+  <!-- predictions -->
+  <g font-size="12" text-anchor="middle" fill="#1d2430">
+    <rect x="540" y="104" width="130" height="40" rx="8" fill="#fff" stroke="#5b6472"/><text x="605" y="129">ẑ(t+H | a₁)</text>
+    <rect x="540" y="178" width="130" height="40" rx="8" fill="#fff" stroke="#5b6472"/><text x="605" y="203">ẑ(t+H | a₂)</text>
+    <rect x="540" y="252" width="130" height="40" rx="8" fill="#fff" stroke="#5b6472"/><text x="605" y="277">ẑ(t+H | aₖ)</text>
+  </g>
+  <text x="605" y="88" font-size="12" fill="#7a828e" text-anchor="middle">动作条件预测（世界会怎么变）</text>
+  <g stroke="#5b6472" stroke-width="1.5">
+    <line x1="670" y1="124" x2="698" y2="190" marker-end="url(#k)"/><line x1="670" y1="198" x2="698" y2="198" marker-end="url(#k)"/><line x1="670" y1="272" x2="698" y2="206" marker-end="url(#k)"/>
+  </g>
+  <!-- cost NEW -->
+  <rect x="700" y="130" width="130" height="136" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="765" y="180" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">目标 / 代价</text>
+  <text x="765" y="204" font-size="13" fill="#1d2430" text-anchor="middle">J(ẑₖ, 目标)</text>
+  <text x="765" y="234" font-size="11" fill="#7a828e" text-anchor="middle">选择是目标设计问题</text>
+  <line x1="830" y1="198" x2="858" y2="198" stroke="#5b6472" stroke-width="1.5" marker-end="url(#k)"/>
+  <!-- select -->
+  <rect x="860" y="150" width="110" height="96" rx="10" fill="#fff" stroke="#5b6472"/>
+  <text x="915" y="194" font-size="15" font-weight="700" fill="#1d2430" text-anchor="middle">选择</text>
+  <text x="915" y="216" font-size="12" fill="#4a5260" text-anchor="middle">argmin J</text>
+
+  <!-- bottom row -->
+  <line x1="915" y1="246" x2="915" y2="368" stroke="#5b6472" stroke-width="1.5" marker-end="url(#k)"/>
+  <rect x="820" y="370" width="150" height="76" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="895" y="402" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">动作读出</text>
+  <text x="895" y="426" font-size="11" fill="#1d2430" text-anchor="middle">选完≠能执行（假设 D）</text>
+  <line x1="820" y1="408" x2="702" y2="408" stroke="#5b6472" stroke-width="1.5" marker-end="url(#k)"/>
+  <rect x="540" y="370" width="160" height="76" rx="10" fill="#fff" stroke="#5b6472"/>
+  <text x="620" y="402" font-size="15" font-weight="700" fill="#1d2430" text-anchor="middle">闭环执行</text>
+  <text x="620" y="426" font-size="12" fill="#4a5260" text-anchor="middle">环境 / 他者反应</text>
+
+  <!-- memory -->
+  <rect x="250" y="370" width="200" height="76" rx="10" fill="#eef3fb" stroke="#2b5aa8" stroke-width="1.4" stroke-dasharray="2 3"/>
+  <text x="350" y="402" font-size="15" font-weight="700" fill="#2b5aa8" text-anchor="middle">长期物体记忆</text>
+  <text x="350" y="426" font-size="11" fill="#1d2430" text-anchor="middle">丢跟踪 → 忘了那个人</text>
+  <line x1="330" y1="368" x2="330" y2="270" stroke="#2b5aa8" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#k)"/>
+
+  <!-- feedback NEW -->
+  <path d="M620,446 L620,500 L95,500 L95,308" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#r)"/>
+  <rect x="190" y="486" width="350" height="28" rx="14" fill="#fdecea"/>
+  <text x="365" y="505" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">闭环误差动力学：小偏差滚雪球，推出训练分布</text>
+
+  <text x="30" y="545" font-size="12" fill="#7a828e">修正后：表示（多视角融合）→ 动作条件预测 → 目标/代价 → 选择 → 动作读出 → 闭环执行（误差反馈回表示）</text>
+  <text x="30" y="565" font-size="12" fill="#7a828e">这就是 world model + MPC 的标准形式；记忆与目标输入的具体做法还没想好。</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 564" width="1000" height="564" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC','Source Han Sans SC',sans-serif">
+<rect width="1000" height="564" rx="14" fill="#fbfaf7"/>
+<text x="40" y="44" font-size="20" font-weight="700" fill="#1d2430">相关工作定位：缝在哪里</text>
+<text x="40" y="68" font-size="13" fill="#7a828e">“JEPA 式” = 非生成，在潜空间里预测；这是把我想做的方向和 MM-Future 区分开的那一列</text>
+<text x="455" y="96" font-size="14" font-weight="700" fill="#1d2430" text-anchor="middle">JEPA 式</text>
+<text x="595" y="96" font-size="14" font-weight="700" fill="#1d2430" text-anchor="middle">多视角输入</text>
+<text x="735" y="96" font-size="14" font-weight="700" fill="#1d2430" text-anchor="middle">动作条件</text>
+<text x="875" y="96" font-size="14" font-weight="700" fill="#1d2430" text-anchor="middle">驾驶规划</text>
+<rect x="30" y="112" width="940" height="44" rx="8" fill="#fff"/>
+<text x="46" y="132" font-size="15" font-weight="700" fill="#1d2430">V-JEPA 2-AC</text>
+<text x="46" y="149" font-size="11" fill="#7a828e">机器人操作，2025</text>
+<circle cx="455" cy="134" r="9" fill="#2f7d4f"/>
+<circle cx="595" cy="134" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<circle cx="735" cy="134" r="9" fill="#2f7d4f"/>
+<circle cx="875" cy="134" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<rect x="30" y="160" width="940" height="44" rx="8" fill="#f4f3ef"/>
+<text x="46" y="180" font-size="15" font-weight="700" fill="#1d2430">Drive-JEPA</text>
+<text x="46" y="197" font-size="11" fill="#7a828e">NAVSIM SOTA，单前视相机</text>
+<circle cx="455" cy="182" r="9" fill="#2f7d4f"/>
+<circle cx="595" cy="182" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<text x="735" y="188" font-size="18" font-weight="700" fill="#a0640f" text-anchor="middle">?</text>
+<circle cx="875" cy="182" r="9" fill="#2f7d4f"/>
+<rect x="30" y="208" width="940" height="44" rx="8" fill="#fff"/>
+<text x="46" y="228" font-size="15" font-weight="700" fill="#1d2430">Auto-JEPA</text>
+<text x="46" y="245" font-size="11" fill="#7a828e">4 帧前视 + ego + route</text>
+<circle cx="455" cy="230" r="9" fill="#2f7d4f"/>
+<circle cx="595" cy="230" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<circle cx="735" cy="230" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<circle cx="875" cy="230" r="9" fill="#2f7d4f"/>
+<rect x="30" y="256" width="940" height="44" rx="8" fill="#f4f3ef"/>
+<text x="46" y="276" font-size="15" font-weight="700" fill="#1d2430">V-JEPA-Drive</text>
+<text x="46" y="293" font-size="11" fill="#7a828e">2026-07，副标题是“感知”</text>
+<circle cx="455" cy="278" r="9" fill="#2f7d4f"/>
+<circle cx="595" cy="278" r="9" fill="#2f7d4f"/>
+<text x="735" y="284" font-size="18" font-weight="700" fill="#a0640f" text-anchor="middle">?</text>
+<text x="875" y="284" font-size="18" font-weight="700" fill="#a0640f" text-anchor="middle">?</text>
+<rect x="30" y="304" width="940" height="44" rx="8" fill="#fff"/>
+<text x="46" y="324" font-size="15" font-weight="700" fill="#1d2430">SparseWorld-TC</text>
+<text x="46" y="341" font-size="11" fill="#7a828e">CVPR 2026 Oral，占用世界模型</text>
+<circle cx="455" cy="326" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<circle cx="595" cy="326" r="9" fill="#2f7d4f"/>
+<circle cx="735" cy="326" r="9" fill="#2f7d4f"/>
+<text x="875" y="332" font-size="18" font-weight="700" fill="#a0640f" text-anchor="middle">?</text>
+<rect x="30" y="352" width="940" height="44" rx="8" fill="#f4f3ef"/>
+<text x="46" y="372" font-size="15" font-weight="700" fill="#1d2430">MM-Future</text>
+<text x="46" y="389" font-size="11" fill="#7a828e">2026-09，扩散/生成式</text>
+<circle cx="455" cy="374" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<circle cx="595" cy="374" r="9" fill="#2f7d4f"/>
+<circle cx="735" cy="374" r="9" fill="#2f7d4f"/>
+<circle cx="875" cy="374" r="9" fill="#2f7d4f"/>
+<rect x="30" y="400" width="940" height="44" rx="8" fill="#fff"/>
+<text x="46" y="420" font-size="15" font-weight="700" fill="#1d2430">M⁴World</text>
+<text x="46" y="437" font-size="11" fill="#7a828e">生成式，面向仿真</text>
+<circle cx="455" cy="422" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<circle cx="595" cy="422" r="9" fill="#2f7d4f"/>
+<text x="735" y="428" font-size="18" font-weight="700" fill="#a0640f" text-anchor="middle">?</text>
+<circle cx="875" cy="422" r="8" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<rect x="30" y="448" width="940" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.6"/>
+<text x="46" y="468" font-size="15" font-weight="700" fill="#c0392b">我想做的方向</text>
+<text x="46" y="485" font-size="11" fill="#7a828e">四者交叉</text>
+<circle cx="455" cy="470" r="9" fill="#c0392b"/>
+<circle cx="595" cy="470" r="9" fill="#c0392b"/>
+<circle cx="735" cy="470" r="9" fill="#c0392b"/>
+<circle cx="875" cy="470" r="9" fill="#c0392b"/>
+<g font-size="12" fill="#4a5260"><circle cx="46" cy="516" r="7" fill="#2f7d4f"/><text x="60" y="520">有</text><circle cx="106" cy="516" r="6" fill="none" stroke="#b9bec6" stroke-width="2"/><text x="120" y="520">没有</text><text x="170" y="521" font-size="15" font-weight="700" fill="#a0640f">?</text><text x="184" y="520">待核实（基于摘要的判断，读全文前不作定论）</text></g>
+<text x="46" y="542" font-size="12" fill="#7a828e">注：Drive-JEPA / Auto-JEPA 的 NAVSIM 评测是伪闭环（非反应式）；MM-Future 另报了 HUGSIM 零样本闭环结果。</text>
+</svg>
