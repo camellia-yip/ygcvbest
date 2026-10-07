@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="900" viewBox="0 0 680 900" role="img">
+<title>WA-JEPA 诊断二叉树</title>
+<desc>六个测试依次排在右侧主干：规划用视觉吗、多路相机真融合了吗、想象会随动作变吗、变化方向对吗、规划用了想象吗、有统一的 3D 空间吗。任一测试判否就分到左侧，指出问题所在和下一步要查的原因；全部判是则到达"学到了"。</desc>
+<style>
+text{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif}
+.th{font-size:14px;font-weight:500}
+.ts{font-size:12px}
+.test rect{fill:#F1EFE8;stroke:#888780}
+.test .th{fill:#2C2C2A}.test .ts{fill:#5F5E5A}
+.fail rect{fill:#FAECE7;stroke:#993C1D}
+.fail .th{fill:#712B13}.fail .ts{fill:#993C1D}
+.win rect{fill:#E1F5EE;stroke:#0F6E56}
+.win .th{fill:#085041}.win .ts{fill:#0F6E56}
+.arr{stroke:#888780;stroke-width:1.5;fill:none}
+.no{fill:#993C1D}.yes{fill:#0F6E56}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="680" height="900" fill="#FFFFFF"/>
+
+<g class="test"><rect x="300" y="40" width="280" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="60" text-anchor="middle" dominant-baseline="central">测试 1：规划用视觉吗？</text>
+<text class="ts" x="440" y="84" text-anchor="middle" dominant-baseline="central">做法：换成别场景的图，车速轨迹不变</text>
+<text class="ts" x="440" y="102" text-anchor="middle" dominant-baseline="central">判据：轨迹变化 &gt; 3 倍噪声地板</text></g>
+<path d="M300 80 L140 80 L140 134" class="arr" marker-end="url(#arrow)"/>
+<text class="ts no" x="270" y="70" text-anchor="middle" dominant-baseline="central">否</text>
+<g class="fail"><rect x="40" y="136" width="200" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="154" text-anchor="middle" dominant-baseline="central">规划没用视觉</text>
+<text class="ts" x="140" y="174" text-anchor="middle" dominant-baseline="central">查：自车状态捷径</text></g>
+<line x1="440" y1="120" x2="440" y2="168" class="arr" marker-end="url(#arrow)"/>
+<text class="ts yes" x="452" y="144" dominant-baseline="central">是</text>
+
+<g class="test"><rect x="300" y="170" width="280" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="190" text-anchor="middle" dominant-baseline="central">测试 2：多路相机真融合了吗？</text>
+<text class="ts" x="440" y="214" text-anchor="middle" dominant-baseline="central">做法：逐路遮挡 + 左右相机互换</text>
+<text class="ts" x="440" y="232" text-anchor="middle" dominant-baseline="central">判据：侧视有影响，互换会出错</text></g>
+<path d="M300 210 L140 210 L140 264" class="arr" marker-end="url(#arrow)"/>
+<text class="ts no" x="270" y="200" text-anchor="middle" dominant-baseline="central">否</text>
+<g class="fail"><rect x="40" y="266" width="200" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="284" text-anchor="middle" dominant-baseline="central">假融合</text>
+<text class="ts" x="140" y="304" text-anchor="middle" dominant-baseline="central">查：是否只靠前视</text></g>
+<line x1="440" y1="250" x2="440" y2="298" class="arr" marker-end="url(#arrow)"/>
+<text class="ts yes" x="452" y="274" dominant-baseline="central">是</text>
+
+<g class="test"><rect x="300" y="300" width="280" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="320" text-anchor="middle" dominant-baseline="central">测试 3：想象会随动作变吗？</text>
+<text class="ts" x="440" y="344" text-anchor="middle" dominant-baseline="central">做法：去噪时强塞左转/急刹轨迹</text>
+<text class="ts" x="440" y="362" text-anchor="middle" dominant-baseline="central">判据：想象变化 &gt; 3 倍噪声地板</text></g>
+<path d="M300 340 L140 340 L140 394" class="arr" marker-end="url(#arrow)"/>
+<text class="ts no" x="270" y="330" text-anchor="middle" dominant-baseline="central">否</text>
+<g class="fail"><rect x="40" y="396" width="200" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="414" text-anchor="middle" dominant-baseline="central">不是世界模型</text>
+<text class="ts" x="140" y="434" text-anchor="middle" dominant-baseline="central">查：画面分支只是陪练？</text></g>
+<line x1="440" y1="380" x2="440" y2="428" class="arr" marker-end="url(#arrow)"/>
+<text class="ts yes" x="452" y="404" dominant-baseline="central">是</text>
+
+<g class="test"><rect x="300" y="430" width="280" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="450" text-anchor="middle" dominant-baseline="central">测试 4：变化方向对吗？</text>
+<text class="ts" x="440" y="474" text-anchor="middle" dominant-baseline="central">做法：对比左转版与直行版的想象</text>
+<text class="ts" x="440" y="492" text-anchor="middle" dominant-baseline="central">判据：前方景物右移，随转角增大</text></g>
+<path d="M300 470 L140 470 L140 524" class="arr" marker-end="url(#arrow)"/>
+<text class="ts no" x="270" y="460" text-anchor="middle" dominant-baseline="central">否</text>
+<g class="fail"><rect x="40" y="526" width="200" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="544" text-anchor="middle" dominant-baseline="central">会变但不合几何</text>
+<text class="ts" x="140" y="564" text-anchor="middle" dominant-baseline="central">查：规划梯度的干扰</text></g>
+<line x1="440" y1="510" x2="440" y2="558" class="arr" marker-end="url(#arrow)"/>
+<text class="ts yes" x="452" y="534" dominant-baseline="central">是</text>
+
+<g class="test"><rect x="300" y="560" width="280" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="580" text-anchor="middle" dominant-baseline="central">测试 5：规划用了想象吗？</text>
+<text class="ts" x="440" y="604" text-anchor="middle" dominant-baseline="central">做法：把规划看到的想象换成别人的</text>
+<text class="ts" x="440" y="622" text-anchor="middle" dominant-baseline="central">判据：规划轨迹随之改变</text></g>
+<path d="M300 600 L140 600 L140 654" class="arr" marker-end="url(#arrow)"/>
+<text class="ts no" x="270" y="590" text-anchor="middle" dominant-baseline="central">否</text>
+<g class="fail"><rect x="40" y="656" width="200" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="674" text-anchor="middle" dominant-baseline="central">想象没被规划使用</text>
+<text class="ts" x="140" y="694" text-anchor="middle" dominant-baseline="central">查：两个分支是否脱节</text></g>
+<line x1="440" y1="640" x2="440" y2="688" class="arr" marker-end="url(#arrow)"/>
+<text class="ts yes" x="452" y="664" dominant-baseline="central">是</text>
+
+<g class="test"><rect x="300" y="690" width="280" height="80" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="710" text-anchor="middle" dominant-baseline="central">测试 6：有统一的 3D 空间吗？</text>
+<text class="ts" x="440" y="734" text-anchor="middle" dominant-baseline="central">做法：把整个世界左右镜像</text>
+<text class="ts" x="440" y="752" text-anchor="middle" dominant-baseline="central">判据：想象也对应地镜像</text></g>
+<path d="M300 730 L140 730 L140 784" class="arr" marker-end="url(#arrow)"/>
+<text class="ts no" x="270" y="720" text-anchor="middle" dominant-baseline="central">否</text>
+<g class="fail"><rect x="40" y="786" width="200" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="140" y="804" text-anchor="middle" dominant-baseline="central">跨视角没有几何</text>
+<text class="ts" x="140" y="824" text-anchor="middle" dominant-baseline="central">查：预测器跨视角对应</text></g>
+<line x1="440" y1="770" x2="440" y2="818" class="arr" marker-end="url(#arrow)"/>
+<text class="ts yes" x="452" y="794" dominant-baseline="central">是</text>
+
+<g class="win"><rect x="300" y="820" width="280" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="440" y="838" text-anchor="middle" dominant-baseline="central">学到了</text>
+<text class="ts" x="440" y="858" text-anchor="middle" dominant-baseline="central">视觉 + 动作条件 + 跨视角几何</text></g>
+</svg>
